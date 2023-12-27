@@ -23,6 +23,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/kill.sh'
+                sleep(time: 1, unit: 'MINUTES')
             }
         }
     }
